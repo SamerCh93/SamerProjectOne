@@ -1,0 +1,839 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: white;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+.header {
+    height: 64px;
+    background-color: black;
+    color: white;
+    border-bottom: 2px solid gray;
+
+}
+
+.header-inner {
+    width: 90%;
+    height: 64px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.logo {
+
+    font-size: 18px;
+    font-weight: bold;
+    color: orange;
+}
+
+
+.navigation a {
+    color: white;
+    margin-left: 17px;
+    font-size: 14px;
+    text-decoration: none;
+
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+}
+
+
+/* Section two */
+.hero {
+    height: 340px;
+    background-color: black;
+    /* background-image: url("hero-background.jpg"); */
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+
+.hero-content {
+    padding-top: 105px;
+}
+
+.hero-content a {
+    text-decoration: none;
+}
+
+.hero h1 {
+    margin: auto;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.missing-note {
+    color: white;
+    font-size: 11px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+
+.button {
+    display: inline-block;
+    padding: 12px 18px;
+    margin: 5px 3px;
+}
+
+.button-light {
+    background-color: white;
+    color: black;
+}
+
+.button-blue {
+    background-color: blue;
+    color: white;
+}
+
+
+.section {
+    padding: 58px 5%;
+    text-align: center;
+}
+
+.section h2 {
+    margin: 0;
+    font-size: 24px;
+    color: black;
+}
+
+
+.heading-line {
+    width: 55px;
+    height: 3px;
+    background-color: steelblue;
+    margin: 14px auto 38px auto;
+}
+
+
+
+/* Section Welcome To Website */
+.three-columns {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.welcome-card {
+    position: relative;
+    border: 2px solid black;
+    min-height: 160px;
+    width: 27%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 1%;
+    padding: 18px 1%;
+    z-index: 1;
+}
+
+.simple-icon {
+    color: blue;
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+
+.welcome-card::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: black;
+    opacity: 0.2;
+    transition: 3s;
+    z-index: -1;
+}
+
+.welcome-card:hover::before {
+    width: 100%;
+}
+
+
+.welcome-card::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    left: 0;
+    top: 0;
+    background-color: black;
+    opacity: 0.2;
+    transition: 3s;
+    z-index: -1;
+}
+
+.welcome-card:hover::after {
+    height: 100%;
+}
+
+
+/* Section Featured Works */
+.works {
+    background-color: color white;
+}
+
+.work-grid {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.work-placeholder {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 27%;
+    height: 280px;
+    margin: 1%;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.work-1 {
+    background-image: url(../Images/campaign.jpg);
+}
+
+.work-2 {
+    background-image: url(../Images/Developer.jpg);
+}
+
+.work-3 {
+    background-image: url(../Images/Development.jpg);
+}
+
+.work-4 {
+    background-image: url(../Images/Design.jpg);
+}
+
+.work-5 {
+    background-image: url(../Images/Project.jpg);
+}
+
+.work-6 {
+    background-image: url(../Images/Background.jpg);
+}
+
+
+.work-placeholder::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.work-placeholder:hover::after {
+    opacity: 1;
+}
+
+
+.work-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -40%);
+    z-index: 2;
+    opacity: 0;
+    transition: 0.5s;
+    color: white;
+}
+
+.work-placeholder:hover .work-content {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+
+
+.category {
+    color: blue;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+.work-content h3 {
+    margin: 12px 0;
+    font-size: 18px;
+}
+
+
+.work-icons a {
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    margin: 3px;
+    background-color: blue;
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.work-icons a:hover {
+    background-color: turquoise;
+}
+
+
+
+/* Section What We Offer */
+.offer-grid {
+    width: 100%;
+    text-align: center;
+}
+
+.offer-card {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    min-height: 130px;
+    margin: 1%;
+    padding: 15px;
+    border: 1px solid black;
+    text-align: left;
+    position: relative;
+}
+
+.offer-icon {
+    float: left;
+    margin-right: 12px;
+    color: blue;
+    font-size: 22px;
+}
+
+.offer-card h3 {
+    margin-top: 3px;
+}
+
+.offer-card p {
+    margin-top: 10px;
+    padding-left: 30px;
+}
+
+
+.offer-card::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    left: 0;
+    top: 0;
+    opacity: 0.5;
+    transition: 2s;
+}
+
+.offer-card:hover:after {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+
+
+/* Why Choose Us */
+.why-us {
+    background-color: white;
+    text-align: left;
+}
+
+.why-content {
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.why-text {
+    float: left;
+    width: 55%;
+}
+
+.why-text h2 {
+    text-align: left;
+}
+
+.left-line {
+    margin-left: 0;
+    margin-bottom: 24px;
+}
+
+.why-text p,
+.why-text li {
+    color: #777777;
+    line-height: 1.8;
+}
+
+.why-text ul {
+    padding-left: 20px;
+}
+
+.why-image {
+    float: right;
+    width: 30%;
+    text-align: center;
+}
+
+
+.portrait-placeholder {
+    width: 100%;
+    height: 300px;
+    background-image: url("../Images/Why.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+.portrait-navigation {
+    margin-left: 180px;
+    margin-top: 10px;
+}
+
+.portrait-navigation a {
+
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: auto;
+    background-color: gray;
+    color: transparent;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+
+.portrait-navigation a:hover {
+    background-color: steelblue;
+    transform: scale(1.5);
+}
+
+
+
+/* Section Statistics */
+.statistics {
+    padding: 55px 4%;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.stat {
+    display: inline-block;
+    width: 21%;
+    margin: 1%;
+    vertical-align: top;
+}
+
+.stat strong {
+    display: block;
+    color: steelblue;
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.stat span {
+    font-size: 13px;
+}
+
+
+/* Section Pricing */
+.Price-columns {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.pricing {
+    background-color: white;
+}
+
+.pricing h3 {
+    color: red;
+    margin-top: 20px;
+}
+
+.price-card {
+    border: 1px solid black;
+    min-height: 310px;
+    width: 27%;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.highlighted-price {
+    background-color: white;
+}
+
+.price-circle {
+    width: 90px;
+    height: 90px;
+    margin: 18px auto;
+    border: 2px solid #168bd2;
+    border-radius: 50%;
+    padding-top: 20px;
+}
+
+.price-circle strong {
+    display: block;
+    font-size: 24px;
+}
+
+.price-circle span {
+    display: block;
+    font-size: 9px;
+    margin-top: 4px;
+}
+
+.outline-button {
+    display: inline-block;
+    border: 1px solid #168bd2;
+    padding: 9px 15px;
+    margin-top: 40px;
+}
+
+
+.price-card::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    transition: 2s;
+    z-index: -1;
+}
+
+.price-card:hover:after {
+    height: 100%;
+    background-color: black;
+}
+
+
+
+/* Section Testimonals */
+.testimonials {
+    padding: 45px 5%;
+    color: white;
+    text-align: center;
+    background-image: url(../Images/team-section-background.jpg);
+    background-size: cover;
+}
+
+.testimonial {
+    display: inline-block;
+    vertical-align: top;
+    width: 38%;
+    margin: 1%;
+    text-align: left;
+}
+
+.small-avatar {
+    float: left;
+    width: 55px;
+    height: 55px;
+    margin-right: 15px;
+    padding-top: 20px;
+    font-size: 10px;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.avatar-one {
+    background-image: url(../Images/Designer.jpg)
+}
+
+.avatar-two {
+    background-image: url(../Images/Content.jpg)
+}
+
+
+.testimonial h2 {
+    margin: 7px 0;
+
+}
+
+.testimonial h3 {
+    margin: 7px 0;
+    color: skyblue;
+}
+
+.testimonial p {
+
+    color: lightgrey;
+
+}
+
+
+/* Section Our Team */
+.team-columns {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.team-card {
+    background-color: lightgrey;
+    min-height: 310px;
+    width: 27%;
+    position: relative;
+}
+
+/* Team Image */
+.team-image {
+    height: 200px;
+    width: 200px;
+    position: relative;
+    margin: auto;
+    margin-top: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.firstMember {
+    background-image: url(../Images/Content.jpg);
+}
+
+.secondMember {
+    background-image: url(../Images/Designer2.jpg);
+}
+
+.thirdMember {
+    background-image: url(../Images/WD.jpg);
+}
+
+.team-card h3 {
+    margin-top: 15px;
+}
+
+.team-card p {
+    margin-top: 8px;
+    color: #777777;
+}
+
+.team-card::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.5;
+    transition: 2s;
+}
+
+.team-card:hover::after {
+    height: 100%;
+}
+
+
+.social-links {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+
+.team-card:hover .social-links {
+    visibility: visible;
+}
+
+.team-card:hover .Name {
+    color: white;
+}
+
+.team-card:hover .Position {
+    color: blue;
+}
+
+
+.item-link {
+    display: block;
+    background-color: steelblue;
+    padding: 10px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.item-link:hover {
+    background-color: yellow;
+}
+
+
+
+
+
+
+/* News Section */
+.News-columns {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.news-card {
+    width: 30%;
+    text-align: left;
+    padding: 0 0 20px 0; 
+    background-color: lightgrey;
+    position: relative;
+    z-index: 1;
+}
+
+.news-image {
+    width: 150px;
+    height: 150px;
+    margin-left: 16px;
+    background-size: cover;
+}
+
+.image-one {
+    background-image: url(../Images/Stadium.jpg);
+}
+
+.image-two {
+    background-image: url(../Images/images.jfif);
+}
+
+.image-three {
+    background-image: url(../Images/imagesOne.jfif);
+}
+
+.news-meta {
+    font-size: 11px;
+    margin-left: 16px;
+    margin-top: 5px;
+
+}
+
+.news-card h3,
+.news-card p,
+.news-card a{
+    margin-left: 16px;
+    margin-top: 10px;
+
+} 
+
+
+.news-card::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    top: 0;
+    left: 0;
+    background-color: blue;
+    opacity: 0.3;
+    transition: 2s;
+    z-index: -1;
+}
+
+.news-card:hover::after {
+    height: 100%;
+}
+
+
+
+
+/* Footer */
+.footer {
+    padding: 45px 5%;
+    background-color: #222222;
+    color: #cccccc;
+    text-align: center;
+}
+
+.Footer-logo {
+
+    width: 215px;
+    height: 125px;
+    margin: auto;
+    margin-bottom: 5px;
+    background-image: url(../Images/Footer\ -Logo.jfif);
+    border-radius: 25%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.Footer-links {
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.footer-link {
+    display: inline;
+    background-color: blue;
+    padding: 10px;
+    font-size: 18px;
+    transition: 0.3s;
+    border-radius: 50%;
+    color: white;
+    margin-left: 5px;
+}
+
+.footer-link:hover {
+    background-color: yellow;
+}
+
+.copyright {
+    margin-top: 10px;
+    font-size: 11px;
+    color: white;
+}
+
+
+/* .welcome-card,
+.price-card,
+.team-card,
+.news-card::after {
+    content: "";
+    display: inline-block;
+    vertical-align: top;
+    width: 27%;
+    margin: 1%;
+    padding: 18px 1%;
+    opacity: 1;
+    transition: 3s;
+} */
